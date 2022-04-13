@@ -33,9 +33,10 @@ app.get("/:id", async (c) => {
         `    <updated>${item.updated_at}</updated>`,
         `    <link rel="alternate" type="text/html" href="${item.url}" />`,
         `    <url>${item.url}</url>`,
-        `    <title>${item.title}</title>`,
+        `    <title>${item.title.replace(/&/g, "&amp;")}</title>`,
         `    <content type="html">${item.rendered_body
           .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")
+          .replace(/&/g, "&amp;")
           .substring(0, 100)}…</content>`,
         `    <author>`,
         `      <name>${id}</name>`,
