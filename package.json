@@ -13,12 +13,7 @@
     "hono": "^0.5.10"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
     "esbuild": "^0.14.23",
-    "esbuild-jest": "^0.5.0",
-    "jest": "^27.5.1",
-    "jest-environment-miniflare": "^2.3.0",
-    "jest-node-exports-resolver": "^1.1.5",
     "miniflare": "^2.3.0"
   }
 }
