@@ -1,6 +1,6 @@
 {
-  "name": "hono-minimal",
-  "version": "0.0.1",
+  "name": "qiita-feed",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "run-s build:*",

@@ -1,58 +1,46 @@
-# Hono minimal project
+# qiita-feed
 
-This is a minimal project with [Hono[炎]](https://github.com/yusukebe/hono/) for Cloudflare Workers.
+Get all posts of a user on Qiita with Feed
 
-## Features
+## Motivation
 
-- Minimal
-- TypeScript
-- [esbuild](https://github.com/evanw/esbuild) to build
-- [Miniflare](https://github.com/cloudflare/miniflare) to develop
-- [Jest](https://jestjs.io/ja/) to test
-- Fast
-- Live reload
+After April 6, 2022, Qiita's User Feed only returns the four most recent posts.
+([qiita-discussions](https://github.com/increments/qiita-discussions/discussions/204#discussioncomment-2556224))
+
+Due to this unannounced change, it is suddenly no longer possible to retrieve the list of articles posted by me using Feed.
+
+However, I needed to do this, so I converted the API to Feed so that I could get the list of articles in the same format as before.
+
+Of course, we need to look at the transition from Feed to API, but I would like you to use this Cloudflare Workers as a workaround.
 
 ## Usage
 
-Initialize
-
-```sh
-$ wrangler generate my-app https://github.com/yusukebe/hono-minimal
+```text
+https://qiita-feed.<your-subdomain>.workers.dev/<user-id>
 ```
 
-Install
+## Scripts
 
-```sh
-$ yarn install
+### Dev (Miniflare)
 
+```shell
+yarn dev
 ```
 
-Develop
+### Build
 
-```sh
-$ yarn dev
+```shell
+yarn build
 ```
 
-Test
+### Deploy
 
+`wrangler` **must** be in global.
+
+```shell
+yarn deploy
 ```
-$ yarn test
-```
-
-Deploy
-
-```
-$ yarn deploy
-```
-
-## Examples
-
-See: <https://github.com/yusukebe/hono/tree/master/examples>
-
-## Author
-
-Yusuke Wada <https://github.com/yusukebe>
 
 ## License
 
-MIT
+MIT License
