@@ -7,7 +7,7 @@
     "build:api": "aspida",
     "build:esbuild": "esbuild --bundle --sourcemap --minify --outdir=dist ./src/index.ts",
     "dev": "miniflare --live-reload --debug",
-    "deploy": "wrangler publish dist/index.js",
+    "deploy": "wrangler publish",
     "lint": "eslint --max-warnings=0 src",
     "lint:fix": "eslint --fix src",
     "format": "prettier --check src",
