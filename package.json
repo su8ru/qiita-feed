@@ -3,17 +3,27 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --verbose",
     "build": "esbuild --bundle --sourcemap --minify --outdir=dist ./src/index.ts",
     "dev": "miniflare --live-reload --debug",
-    "deploy": "wrangler publish dist/index.js"
+    "deploy": "wrangler publish dist/index.js",
+    "lint": "eslint --max-warnings=0 src",
+    "lint:fix": "eslint --fix src",
+    "format": "prettier --write src",
+    "format:fix": "pretier --check src"
   },
   "license": "MIT",
   "dependencies": {
     "hono": "^0.5.10"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^3.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "esbuild": "^0.14.23",
-    "miniflare": "^2.3.0"
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "miniflare": "^2.3.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
   }
 }
