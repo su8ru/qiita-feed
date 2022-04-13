@@ -20,7 +20,7 @@ app.get("/:id", async (c) => {
     `<feed xml:lang="ja-JP" xmlns="http://www.w3.org/2005/Atom">`,
     `  <id>tag:qiita.com,2005:/${id}/feed</id>`,
     `  <link rel="alternate" type="text/html" href="https://qiita.com"/>`,
-    `  <link rel="self" type="application/atom+xml" href="https://qiita-rss.su8ru.workers.dev/${id}"/>`,
+    `  <link rel="self" type="application/atom+xml" href="https://qiita-feed.su8ru.workers.dev/${id}"/>`,
     `  <title>${id}の記事 - Qiita</title>`,
     `  <description>Qiitaでユーザー${id}による記事</description>`,
     `  <updated>${items[0].created_at}</updated>`,

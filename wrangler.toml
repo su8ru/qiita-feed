@@ -1,4 +1,4 @@
-name= "qiita-rss"
+name= "qiita-feed"
 type = "javascript"
 workers_dev = true
 
