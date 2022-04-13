@@ -3,26 +3,31 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "build": "esbuild --bundle --sourcemap --minify --outdir=dist ./src/index.ts",
+    "build": "run-s build:*",
+    "build:api": "aspida",
+    "build:esbuild": "esbuild --bundle --sourcemap --minify --outdir=dist ./src/index.ts",
     "dev": "miniflare --live-reload --debug",
     "deploy": "wrangler publish dist/index.js",
     "lint": "eslint --max-warnings=0 src",
     "lint:fix": "eslint --fix src",
-    "format": "prettier --write src",
-    "format:fix": "pretier --check src"
+    "format": "prettier --check src",
+    "format:fix": "prettier --write src"
   },
   "license": "MIT",
   "dependencies": {
+    "@aspida/fetch": "^1.9.1",
     "hono": "^0.5.10"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.4.0",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
+    "aspida": "^1.9.1",
     "esbuild": "^0.14.23",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "miniflare": "^2.3.0",
+    "notios": "^0.0.6",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3"
   }

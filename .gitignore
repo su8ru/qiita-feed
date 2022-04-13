@@ -4,3 +4,4 @@ worker
 package-lock.json
 yarn.lock
 .cargo-ok
+src/qiita-api/$api.ts
