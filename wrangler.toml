@@ -1,0 +1,11 @@
+name= "qiita-rss"
+type = "javascript"
+workers_dev = true
+
+compatibility_date = "2022-04-13"
+
+[build]
+command = "yarn run build"
+
+[build.upload]
+format = "service-worker"
